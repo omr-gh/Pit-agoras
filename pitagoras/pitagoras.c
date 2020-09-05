@@ -54,7 +54,6 @@ int filas, columnas;
 int sound = 0;
 int music = 0;
 WINDOW *win_vals;
-short n_pista;
 
 int main()
 {
