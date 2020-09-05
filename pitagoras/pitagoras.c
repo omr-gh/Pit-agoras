@@ -175,15 +175,6 @@ void ini_video(char *name)
 	init_pair(21, 4, 7);
 	init_pair(22, 7, 5);
 
-	/* Para el reproductor */
-	init_pair(23, 3, 1); //menu selec_song
-	init_pair(24, 2, 0); // numeros en la ventana info de la cancion
-	init_pair(25, 3, 0); //muestra la duracion de la cancion(numeros)
-	init_pair(26, 4, 0); //muestra la duracion de la cancion(numeros)
-	init_pair(27, 6, 0); // resalta la pista en reproducción / muestra la duracion de la cancion(palabra duracion)
-	init_pair(28, 5, 0); // muestra la cancion selecc.
-	init_pair(29, 6, 1); // resalta la pista en reproducción
-
 	cbreak();
 	noecho();
 	keypad(stdscr, true);
@@ -531,31 +522,6 @@ void sonido_si_no()
 	box(win_sonido, ':', ':');
 	wattroff(win_sonido, COLOR_PAIR(1));
 	wrefresh(win_sonido);
-}
-
-/* boton musica de fondo */
-void musica_si_no()
-{
-	WINDOW *win_musica;
-	int y = 1; //filas/filas;
-	int x = (columnas * 10) / 100;
-
-	win_musica = newwin(4, 10, y, x);
-	if(music == 0){
-		wbkgd(win_musica, A_BOLD|COLOR_PAIR(12)); // letras amarillas, fondo rojo
-		mvwprintw(win_musica, 1, 2, "Musica");
-		mvwprintw(win_musica, 2, 4, "No");
-		wattroff(win_musica, A_BOLD|COLOR_PAIR(12));
-	}else{
-		wbkgd(win_musica, A_BOLD|COLOR_PAIR(18)); // letras amarillas, fondo rojo
-		mvwprintw(win_musica, 1, 2, "Musica");
-		mvwprintw(win_musica, 2, 4, "Si");
-		wattroff(win_musica, A_BOLD|COLOR_PAIR(18));
-	}
-	wattron(win_musica, COLOR_PAIR(1)); //letras negras, fondo blanco
-	box(win_musica, ':', ':');
-	wattroff(win_musica, COLOR_PAIR(1));
-	wrefresh(win_musica);
 }
 
 /* determina que sonidos se usan  */
