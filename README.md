@@ -8,7 +8,8 @@ Se necesita instalar los siquientes paquetes:
 compilador gcc sox espeak mbrola mbrola-es1 mbrola-es2 -
 libncurses5-dev libncursesw5-dev figlet
 
-en debian ejecutar sudo apt install gcc sox espeak ...
+en debian ejecutar:
+sudo apt install gcc sox espeak ...
 
 El código se debe compilar linkando con la librería ncurses:
 gcc pitagoras.c -o pitagoras -lncurses
