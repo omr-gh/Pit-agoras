@@ -49,11 +49,6 @@ void init(char *);
 void salir();
 
 WINDOW *ventana_inf(WINDOW *win_inferior), *panel(WINDOW *casilleros_panel[10][10]);
-char *cancion[] = {
-					"Bad Guy", "Believer","Billie Jean","Ddu-du Ddu-Du Blackpink","Rolling Sky",
-					"Ghostbusters","Free software song","Harder, Better, Faster, Stronger","Robot Rock",
-					"8 bits","Sandstorm"
-			    	};
 			    	
 int filas, columnas;
 int sound = 0;
