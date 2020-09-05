@@ -7,11 +7,6 @@
  * COLOR_CYAN    6
  * COLOR_WHITE   7
  * */
-/* uso de execv
- * char *comado = "/bin/ls";
- * char *args[] = { "ls", "-l", "/usr/include", 0 }; lista de argumentos
- * execv ( comando, args );  comando, argumentos
- **/
 
 #include <ncurses.h>
 //#include <panel.h>
