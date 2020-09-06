@@ -125,7 +125,6 @@ void init(char *name)
 	ini_video(name);
 	curs_set(0);
 	sonido_si_no();
-//	musica_si_no();
 	ventana_bienv();
 	ventana_valores();
 	ventana_instrucciones();
@@ -495,7 +494,7 @@ void sonido_si_no()
 {
 	WINDOW *win_sonido;
 	int y = filas/filas;
-	int x = 1; //(columnas * 10) / 100;
+	int x = 1;
 
 	win_sonido = newwin(4, 10, y, x);
 	if(sound == 0){
@@ -504,11 +503,12 @@ void sonido_si_no()
 		mvwprintw(win_sonido, 2, 4, "No");
 		wattroff(win_sonido, A_BOLD|COLOR_PAIR(12));
 	}else{
-		wbkgd(win_sonido, A_BOLD|COLOR_PAIR(18)); // letras amarillas, fondo rojo
+		wbkgd(win_sonido, A_BOLD|COLOR_PAIR(18)); // letras cyan, fondo negro
 		mvwprintw(win_sonido, 1, 2, "Sonido");
 		mvwprintw(win_sonido, 2, 4, "Si");
 		wattroff(win_sonido, A_BOLD|COLOR_PAIR(18));
 	}
+	//marco del boton
 	wattron(win_sonido, COLOR_PAIR(1)); //letras negras, fondo blanco
 	box(win_sonido, ':', ':');
 	wattroff(win_sonido, COLOR_PAIR(1));
