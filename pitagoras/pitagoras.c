@@ -9,12 +9,11 @@
  * */
 
 #include <ncurses.h>
-//#include <panel.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <stdint.h>
-#include <wait.h>
+#include <sys/wait.h>
 #include <ctype.h>
 #include <sys/types.h>
 #include <sys/mman.h>
@@ -24,7 +23,7 @@
 #define SONIDO_CORRECTO system("play -q sonido_teclas/correcto.ogg&");
 #define SONIDO_INCORRECTO system("play -q sonido_teclas/fail.ogg&");
 #define SONIDO_CIERRE system("play -q sonido_teclas/cerrar.ogg");
-#define SONIDO_ventana_ya_ingresado system("play -q sonido_teclas/yaIng.ogg&");
+#define SONIDO_VENATANA_YA_INGRESADO system("play -q sonido_teclas/yaIng.ogg&");
 void __fpurge(FILE *stream);
 void dibujar_X();
 void ventana_valores();
@@ -32,9 +31,7 @@ int ing_resp();
 void pintar_casilla(WINDOW *casilleros[10][10], int, int, int, int);
 int *init_matriz_control(int (*matriz_control)[10][10]);
 int menu(int*, int*, int*, WINDOW *win_inferior);
-//void cronometro();
 void sonido_si_no();
-//void musica_si_no();
 char presiona_numeros(char);
 void set_snd(char caracter);
 void ventana_estadisticas(WINDOW *, int, int, int, int);
@@ -535,7 +532,7 @@ void set_snd(char caracter)
 	if(caracter == 'o')
 		SONIDO_CIERRE;
 	if(caracter == 'y')
-		SONIDO_ventana_ya_ingresado;
+		SONIDO_VENATANA_YA_INGRESADO;
 }
 
 //muetra las estadísticas del juego
@@ -750,6 +747,3 @@ void reglas()
 	wrefresh(win_reglas);
 	wattroff(win_reglas, A_BOLD | COLOR_PAIR(13) | COLOR_PAIR(14));
 }
-
-
-
