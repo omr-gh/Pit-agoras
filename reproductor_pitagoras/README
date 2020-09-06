@@ -1,0 +1,11 @@
+Un pequeño y simple reproductor para complementar el juego de la tabla pitagórica. Aunque puede usarse
+en forma independiente. El proyecto completo está en desarrollo.
+No abre un directorio sino que las canciones están predeterminadas.
+
+Pre-requisitos: Se necesita instalar los siquientes paquetes:
+compilador gcc sox libncurses5-dev libncursesw5-dev ffmpeg
+
+en debian ejecutar: 
+sudo apt install gcc sox libncurses5-dev libncursesw5-dev ffmpeg.
+
+El código se debe compilar linkando con la librería ncurses: gcc reproductor.c -o reproductor -lncurses
