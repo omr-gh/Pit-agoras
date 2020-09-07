@@ -74,7 +74,7 @@ int main()
 			for(i = 0; i < strlen(buffer); i++)
 				buffer[i] = '\0';
 			if(pista_rep != 11)
-			system("bash reproducir_pista.sh");
+				system("bash reproducir_pista.sh");
 		}
 		close(p[0]);
     }
