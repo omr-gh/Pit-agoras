@@ -50,7 +50,8 @@ int main()
     init();
     win_info();
     time_info0();
-    pipe(p);
+	
+    if(pipe(p) == -1) exit(-1);
     pid = fork();
 
     if(pid > 0){
