@@ -1,6 +1,6 @@
-Un pequeño y simple reproductor de audio para complementar el juego de la tabla pitagórica. Aunque puede usarse
+Un pequeño y simple reproductor de audio para complementar el juego de la tabla pitagórica. 
+No abre un directorio sino que las canciones están predeterminadas. Aunque puede usarse
 en forma independiente. El proyecto completo está en desarrollo.
-No abre un directorio sino que las canciones están predeterminadas.
 
 Pre-requisitos: Se necesita instalar los siquientes paquetes:
 compilador gcc sox libncurses5-dev libncursesw5-dev ffmpeg
