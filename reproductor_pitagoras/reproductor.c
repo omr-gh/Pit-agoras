@@ -29,7 +29,6 @@ void informa_pista(short*);
 void muestra_pista(short*);
 void win_info();
 void cronometro();
-int tiempo_pista();
 void sig_handler(int sig);
 void salir();
 WINDOW *menu, *info;
