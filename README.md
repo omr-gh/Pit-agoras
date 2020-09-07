@@ -2,7 +2,7 @@
 Juego interactivo en consola escrito en C con la librería ncurses. Está pensado para alumnos de primaria.
 Simula una tabla pitagórica en la que el participante deberá probar su
 conocimiento en las tablas de multiplicar.
-Lo complementa un pequeño y simple reproductor de música, el cual puede usarse
+Lo complementa un pequeño y simple reproductor de audio, el cual puede usarse
 en forma independiente. El proyecto completo está en desarrollo.
 
 Pre-requisitos:
