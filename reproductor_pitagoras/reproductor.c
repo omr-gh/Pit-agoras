@@ -54,8 +54,7 @@ int main()
     pid = fork();
 
     if(pid > 0){
-		close(p[0]);  // el padre escribe. Cierro el lado de la lectura
-		
+		close(p[0]);
 		while(1){
 			selec_song(&pista_rep, &pista, &enter);
 			informa_pista(&pista_rep);
@@ -64,16 +63,16 @@ int main()
 			sprintf(buffer, "%d", pista_rep);
 			system("bash terminar_procs.sh 2> /dev/null");
 			system("killall play 2>/dev/null");
-			write(p[1], buffer, strlen(buffer));  // escribo en el buffer del lado de la escritura del pipe
+			write(p[1], buffer, strlen(buffer));
 		}
 		close(p[1]);
     }
     else{
-    	close(p[1]);  // el hijo lee. Cierro el lado de la escritura
-		while((readbytes = read(p[0], buffer, SIZE)) > 0){ // leo el buffer y reproduzco la pista que me llega por e pipe
+    	close(p[1]);
+		while((readbytes = read(p[0], buffer, SIZE)) > 0){
 			pista_rep = atoi(buffer);
 			for(i = 0; i < strlen(buffer); i++)
-			buffer[i] = '\0';
+				buffer[i] = '\0';
 			if(pista_rep != 11)
 			system("bash reproducir_pista.sh");
 		}
@@ -241,8 +240,7 @@ void muestra_pista(short *pista)
 		wprintw(info, "...");
     }
     else
-    	//mvwprintw(info, y-2, 5, "-- %s --", titulo);
-		  wprintw(info, "%s --", titulo);
+	    wprintw(info, "%s --", titulo);
     wrefresh(info);
     wattroff(info, A_BOLD|COLOR_PAIR(6));
 }
