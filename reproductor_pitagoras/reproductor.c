@@ -332,7 +332,7 @@ void erase_win(WINDOW *win)
 void salir()
 {
     system("bash terminar_procs.sh");
-    system("killall play");
+    system("killall play 2>/dev/null");
     endwin();
     exit(0);
 }
