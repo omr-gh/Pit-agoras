@@ -7,7 +7,7 @@ en forma independiente. El proyecto completo está en desarrollo.
 
 Pre-requisitos:
 Se necesita instalar los siquientes paquetes:
-compilador gcc sox espeak mbrola mbrola-es1 mbrola-es2 -
+compilador gcc sox libsox-fmt-all espeak mbrola mbrola-es1 mbrola-es2 -
 libncurses5-dev libncursesw5-dev figlet
 
 en debian ejecutar:
