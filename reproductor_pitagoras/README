@@ -3,9 +3,9 @@ No abre un directorio sino que las canciones están predeterminadas. Puede usars
 en forma independiente. El proyecto completo está en desarrollo.
 
 Pre-requisitos: Se necesita instalar los siquientes paquetes:
-compilador gcc sox libncurses5-dev libncursesw5-dev ffmpeg
+compilador gcc sox libsox-fmt-all libncurses5-dev libncursesw5-dev ffmpeg
 
 en debian ejecutar: 
-sudo apt install gcc sox libncurses5-dev libncursesw5-dev ffmpeg.
+sudo apt install gcc sox libsox-fmt-all libncurses5-dev libncursesw5-dev ffmpeg.
 
 El código se debe compilar linkando con la librería ncurses: gcc reproductor.c -o reproductor -lncurses
