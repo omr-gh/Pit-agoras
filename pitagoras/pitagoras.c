@@ -1,3 +1,5 @@
+/* Pitagoras 1.0 juego interactivo */
+
 /* COLOR_BLACK   0
  * COLOR_RED     1
  * COLOR_GREEN   2
