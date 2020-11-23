@@ -1,4 +1,4 @@
-/* Pitagoras 1.0 juego interactivo */
+/* Pitagoras v1.0 juego interactivo */
 
 /* COLOR_BLACK   0
  * COLOR_RED     1
